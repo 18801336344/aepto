@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+        <link rel="stylesheet" type="text/css" href="style/css/login.css" />
+        <style type="text/css">
+            .login_content .login_message h3.zhaohui_pic{ height: 35px; font-size: 16px; padding-left: 30px;background: url(/home/css/img/sanfang_phone.png) 0 0 no-repeat; color:#121212;}
+            .change_pass .login_message h3{ background-image: url(/home/css/img/sanfang_pwd.png);}
+            .login_content .login_message p{ color:#666; font-size: 14px;}
+            .change_p  .login_message p{ color:#f00; }
+            .change_p,.change_pass{ height:auto;display: none;}
+
+            .shuru ul li{  width: 100%; margin-top: 10px; position: relative;}
+            /*.login_content { margin-top: -140px;}*/
+            .shuru ul{ margin: 20px 0; }
+            .shuru ul li input{ width: 100%;padding-left: 40px;height: 40px; background: url(/home/css/img/login_admin.png) 10px center no-repeat; color:#666;border: 1px solid #ebebeb;}
+            .shuru ul li.liangge input{ width: 60%;background-image: url(/home/css/img/login_code_pic.png);}
+            .shuru ul li.liangge input:nth-of-type(2){width: 38%;padding-left: 0; margin-left: 2%; box-sizing:border-box; background: none; background-color: #333; color:#fff; font-weight: normal; font -size: 12px;}
+            input[placeholder]{ font-weight: normal;}
+            .xiayibu input{ width: 100%; height: 40px; line-height: 40px; background-color: #333; text-align: center;}
+            input[type=text]:focus,input[type=password]:focus{ border: 1px solid #000;}
+            .shuru ul li em{position: absolute;right: -25px;top: 50%;-webkit-transform: translate(0,-50%);-moz-transform: translate(0,-50%);-ms-transform: translate(0,-50%); -o-transform: translate(0 ,-50%);transform: translate(0,-50%);width: 18px;height: 18px;background: url(/home/css/img/login_file.png) 0 0 no-repeat; }
+            .change_pass .shuru ul li input{ background-image: url(home/css/img/login_password.png);}
+            .sanfang_wrap li a{ padding-top: 85px; display: block;}
+            .change_pass{ display: none; }
+            @media screen and (max-width: 640px){
+            /*.login_content  {margin-top: 160px;}*/
+            .sanfang_wrap li:nth-of-type(2){display: none;}
+            .sanfang_wrap li{width: 50%;}
+            }
+            </style>
+        <script type="text/javascript" src="node_modules/zepto/src/zepto.js"></script>
+    </head>
+    <body>
+    <!-- <form action="/home/Login/passwd_back" method="post">
+    </form> -->
+    <div class="login_wrap change">
+        <div class="text">
+            <span>
+                <p>全球同步体验式时尚职业培训机构</p>
+                <p>COHIM FASHION TRAINING ORGANIZATION</p>
+            </span>
+        </div>
+        <div class="login_content content_log">
+                <b class="login_icon"><em></em><em></em></b>
+                <div class="login_message">
+                    <h3 class="login_am"></h3>
+                    <h3 class="login_ams"></h3>
+                    <h2>欢迎登录</h2>
+                    <form action="register.html" method="post">
+                    <p class="login_pp">还没有帐号？<a>立即注册</a></p>
+                        <input class="baocun" type="submit" style="display: none;">
+                    </form>
+                    <script>
+                        $(function(){
+                            $('.login_pp a').click(function () {
+                                $('.baocun').click()
+                            })
+                        })
+                        $(function(){
+                            $('.zhaohui').click(function () {
+                                $('.baocun1').click()
+                            })
+                        })
+                    </script>
+                    <form action="change_password.html" method="post">
+                    
+                        <input class="baocun1" type="submit" style="display: none;">
+                    </form>
+                    <form action="/home/login/checklogin.html" method="post">
+                <input type="hidden" name="__token__" value="50c3e4390d1edeb673bf5fde706da9f0">                        <ul>
+                            <li><input type="text" placeholder="请输入您的手机号" autocomplete="off" id="phone" maxlength="11" name="phone"><em style="display: inline;"></em></li>
+                            <li><input type="password" placeholder="请输入您的密码" autocomplete="off" id="pwd" maxlength="18" name="password"><em style="display: none;"></em></li>
+                            <li class="clearfix"><input type="text" placeholder="请输入验证码" autocomplete="off" id="code" maxlength="4" name="verify"><em></em></li>
+                        </ul>
+                        <span><a class="zhaohui" href="javascript:void(0);">找回密码？</a></span>
+                        <input type="button" value="登录" class="submit" disabeld="disabeld">
+                    </form>
+                    <div class="sanfanglg">
+                        <div class="sanfang_wrap">
+                            <ul clearfix="">   
+                                <li><a href="/wb_login.php"><p>微博</p></a></li>
+                                <li><a href="/home/login/weixin"><p>微信</p></a></li>
+                                <li><a href="/home/qqlogin/index"><p>QQ</p></a></li><!-- onclick="toLogin();" -->
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="qiehuan"><a href="javascript:void(0);">切换至第三方登录</a></span>
+                    <span class="qiehuans"><a href="javascript:void(0);">切换至账号密码登录</a></span>
+                </div>
+        </div>
+        <div class="login_content change_p" style="height:auto;">
+            <div class="login_message" style="padding: 36px 40px 40px;">
+                <h3 class="zhaohui_pic">请确认您的手机号</h3>
+                <p></p>
+                 <div class="shuru">
+                    <ul class="yanzheng">
+                        <li><input type="text" id="phone1" maxlength="11" placeholder="请输入您的手机号"><em style="display: none;"></em></li>
+                        <li class="liangge"><input id="code1" maxlength="4" type="text" placeholder="请输入您的验证码"><input type="button" value="获取验证码" id="huoqu1"><em style="display: none; background-image: url(&quot;/home/css/img/login_file.png&quot;);"></em></li>
+                    </ul>
+                    <div class="xiayibu"><input type="button" class="quxia1" value="下一步"></div>
+                </div>
+            </div>  
+        </div>
+        <div class="login_content change_pass">
+            <div class="login_message" style="padding: 24px 40px 40px;">
+                <h3 class="zhaohui_pic">请输入您的登录密码</h3>
+                <div class="shuru">
+                <ul>
+                    <li><input type="password" id="password1" maxlength="16" placeholder="请输入您的新密码"><em style="display: block; background-image: url(&quot;/home/css/img/login_ss.png&quot;);"></em></li>
+                    <li><input type="password" id="passs1" maxlength="16" placeholder="请再次输入您的密码"><em style="display: none;"></em></li>
+                </ul>
+                <div class="xiayibu gologin"><input type="button" value="完成" id="tijiaole1"></div>
+            </div>
+            </div>            
+        </div>            
+        <div class="message">
+            <span>
+                <p>中赫时尚（北京）文化发展股份有限公司 京ICP备12038015号</p>
+                <p>Copyright © 2004-2017 Cohim All Rights Reserved Power by DedeCms</p>
+            </span>
+        </div>
+    </div>
+    </body>
+</html>

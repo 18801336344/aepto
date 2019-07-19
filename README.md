@@ -1,3 +1,3 @@
 # zepto-page
 # zepto.core
-# $(/<div>/) /////添加div节点
+# $(\<div>\) /////添加div节点

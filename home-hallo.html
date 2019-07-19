@@ -4,33 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
         <link rel="stylesheet" type="text/css" href="style/css/login.css" />
-        <style type="text/css">
-            .login_content .login_message h3.zhaohui_pic{ height: 35px; font-size: 16px; padding-left: 30px;background: url(/home/css/img/sanfang_phone.png) 0 0 no-repeat; color:#121212;}
-            .change_pass .login_message h3{ background-image: url(/home/css/img/sanfang_pwd.png);}
-            .login_content .login_message p{ color:#666; font-size: 14px;}
-            .change_p  .login_message p{ color:#f00; }
-            .change_p,.change_pass{ height:auto;display: none;}
-
-            .shuru ul li{  width: 100%; margin-top: 10px; position: relative;}
-            /*.login_content { margin-top: -140px;}*/
-            .shuru ul{ margin: 20px 0; }
-            .shuru ul li input{ width: 100%;padding-left: 40px;height: 40px; background: url(/home/css/img/login_admin.png) 10px center no-repeat; color:#666;border: 1px solid #ebebeb;}
-            .shuru ul li.liangge input{ width: 60%;background-image: url(/home/css/img/login_code_pic.png);}
-            .shuru ul li.liangge input:nth-of-type(2){width: 38%;padding-left: 0; margin-left: 2%; box-sizing:border-box; background: none; background-color: #333; color:#fff; font-weight: normal; font -size: 12px;}
-            input[placeholder]{ font-weight: normal;}
-            .xiayibu input{ width: 100%; height: 40px; line-height: 40px; background-color: #333; text-align: center;}
-            input[type=text]:focus,input[type=password]:focus{ border: 1px solid #000;}
-            .shuru ul li em{position: absolute;right: -25px;top: 50%;-webkit-transform: translate(0,-50%);-moz-transform: translate(0,-50%);-ms-transform: translate(0,-50%); -o-transform: translate(0 ,-50%);transform: translate(0,-50%);width: 18px;height: 18px;background: url(/home/css/img/login_file.png) 0 0 no-repeat; }
-            .change_pass .shuru ul li input{ background-image: url(home/css/img/login_password.png);}
-            .sanfang_wrap li a{ padding-top: 85px; display: block;}
-            .change_pass{ display: none; }
-            @media screen and (max-width: 640px){
-            /*.login_content  {margin-top: 160px;}*/
-            .sanfang_wrap li:nth-of-type(2){display: none;}
-            .sanfang_wrap li{width: 50%;}
-            }
-            </style>
-        <script type="text/javascript" src="node_modules/zepto/src/zepto.js"></script>
+        <script>
+        document.write('<script src= node_modules/zepto/src/'+('__proto__' in {} ? 'zepto' :'jquery') +'.js><\/script>')
+    </script>
     </head>
     <body>
     <!-- <form action="/home/Login/passwd_back" method="post">
@@ -52,18 +28,6 @@
                     <p class="login_pp">还没有帐号？<a>立即注册</a></p>
                         <input class="baocun" type="submit" style="display: none;">
                     </form>
-                    <script>
-                        $(function(){
-                            $('.login_pp a').click(function () {
-                                $('.baocun').click()
-                            })
-                        })
-                        $(function(){
-                            $('.zhaohui').click(function () {
-                                $('.baocun1').click()
-                            })
-                        })
-                    </script>
                     <form action="change_password.html" method="post">
                     
                         <input class="baocun1" type="submit" style="display: none;">
